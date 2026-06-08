@@ -18,6 +18,8 @@ typora-root-url: Transformation
 
 A 是一个旋转矩阵，坐标轴 xyz 经过它的操作就变成了 uvw。上图可以看到 **A 在 xyz 坐标系下的坐标就是 uvw**！！！所以 A 肯定是由正交单位向量组组成的，所以 A 是一个正交矩阵。因为**正交矩阵的逆等于它的转置**，所以我们可以用它的转置来方便的替代它的逆，**旋转矩阵是正交矩阵**这个性质我们之后会用到。
 
+更普遍的，从一个坐标系A旋转到另一个坐标系B，只需要把在B下A三个轴向量按列排列成旋转矩阵即可。
+
 看到这里再回头看 GAMES101 里闫老师说的旋转矩阵，简直就是高维知识支配低维。
 
 ![image-20211203195407835](image-20211203195407835.png)
@@ -152,7 +154,6 @@ M_{persp} = M_{ortho} M_{persp \rarr ortho} =
 $$
 如果用 fov 和 ratio 表示：
 $$
-
 =
 \begin{bmatrix}
 \frac{\cot{\frac{\theta}{2}}}{ratio}& 0& 0& 0\\
@@ -515,5 +516,4 @@ const mouseControl = {
 * [WebGL Fundamental](https://webglfundamentals.org/webgl/lessons/zh_cn/)
 
 * [LookAt、Viewport、Perspective矩阵](https://zhuanlan.zhihu.com/p/66384929)
-
 
